@@ -278,7 +278,7 @@ function writer(obj){
 
 
 
-	fs.writeFile(`../${obj.name}-${obj.date}.html`, html, function (err) {
+	fs.writeFile(`prescriptions/${obj.name}-${obj.date}.html`, html, function (err) {
   		if (err) throw err;
   		console.log('Saved!');
 	}); 
