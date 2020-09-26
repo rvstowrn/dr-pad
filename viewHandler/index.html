@@ -27,7 +27,7 @@
     <div id="add" class="row" style="text-align: center;">
       
 
-      <form id="form" onsubmit="saveHandler('add','-1')">
+      <form id="form">
         <div class="col s6">
           <div class="input-field col s12">
             <input id="name" type="text" class="validate">
@@ -104,7 +104,7 @@
         </div>  
         <div class="col s12">
           <br>
-          <button type="submit" class="btn blue darken-1">submit</button>
+          <button type="button" onclick="saveHandler('add','-1')" class="btn blue darken-1">submit</button>
         </div>
       </form>
 
@@ -193,7 +193,7 @@
               </div>  
               <div class="col s12">
                 <br>
-                <button type="submit" class="btn blue darken-1">submit</button>
+                <button type="button" id="editBtnSubmit" class="btn blue darken-1">submit</button>
               </div>
             </form> 
 

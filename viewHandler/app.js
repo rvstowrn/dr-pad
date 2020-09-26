@@ -71,9 +71,46 @@ function saveHandler(type,id){
 	}
 
 	store.set(`db.${sid}`,obj);
-	setTable();
 
 	writer(obj);
+	if(type=='add'){
+		setTable();
+		// Reset Inputs
+		$('#name'+e).val('');
+		$('#gender'+e).val('');
+		$('#date'+e).val('');
+		$('#age'+e).val('');
+		$('#phn'+e).val('');
+		$('#side'+e).val('');
+		$('#p1'+e).val('');
+		$('#p2'+e).val('');
+		$('#p3'+e).val('');
+		$('#p4'+e).val('');
+		$('#p5'+e).val('');
+		$('#i1'+e).val('');
+		$('#i2'+e).val('');
+		$('#i3'+e).val('');
+		$('#i4'+e).val('');
+		$('#i5'+e).val('');
+
+		// Reset Labels
+		$('#name'+e).next().removeClass('active');
+		$('#gender'+e).next().removeClass('active');
+		$('#date'+e).next().removeClass('active');
+		$('#age'+e).next().removeClass('active');
+		$('#phn'+e).next().removeClass('active');
+		$('#side'+e).next().removeClass('active');
+		$('#p1'+e).next().removeClass('active');
+		$('#p2'+e).next().removeClass('active');
+		$('#p3'+e).next().removeClass('active');
+		$('#p4'+e).next().removeClass('active');
+		$('#p5'+e).next().removeClass('active');
+		$('#i1'+e).next().removeClass('active');
+		$('#i2'+e).next().removeClass('active');
+		$('#i3'+e).next().removeClass('active');
+		$('#i4'+e).next().removeClass('active');
+		$('#i5'+e).next().removeClass('active');
+	}
 
 }
 
@@ -100,7 +137,7 @@ function setTable(){
 function editBlockHandler(id){
 	$('#table').css('display','none');
 	$('#update').css('display','unset');
-	$('#appendForm').submit((e)=>{
+	$('#editBtnSubmit').click((e)=>{
 		saveHandler('edit',id);
 	});
 
