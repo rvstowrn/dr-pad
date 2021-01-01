@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body{
+                width: 800px;
+                margin: auto;
+                border: 2px solid black;
+                padding: 10px;
+                box-sizing: border-box;
+                padding-bottom: 100px;
+                position: relative;
+            }
+            .flex-center{
+                display: flex;
+                justify-content: center;
+                align-items: baseline;
+            }
+            .top25{
+                position: relative;
+                top: -25px;
+            }
+            .bold-spaced{
+                letter-spacing: .5px;
+                font-weight: 500;
+            }
+            .section{
+                border-top: 3px solid;
+                padding: 5px 2px;
+            }
+            .halfrow{
+                width: 50%;
+                float: left;
+            }
+            .bold-large{
+                font-weight: bold;
+                font-size: 17px;
+            }
+            .flex-down{
+                display: flex;
+                flex-direction: column;
+            }
+            .underline-bold{
+                font-weight: bold;
+                text-decoration: underline;
+            }
+            .quarters>div{
+                width: 25%;
+                font-weight: bold;
+                float: left;
+            }
+            .right-bottom{
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+            }
+            table{
+                border-collapse: collapse;
+            }
+            td{
+                text-align: center;
+                font-weight: bold;
+                height: 20px;
+                width: 200px;
+                border: 1px solid;
+            }
+            .back-img{
+                position: absolute;
+                z-index: -1;
+                opacity: .85;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+        </style>
+    </head>
+    <body>
+        <img src="./background.jpg" alt="" class="back-img">
+        <div class="flex-center">
+            <h1>Dr. (Prof). N K Verma,</h1> 
+            <h2>M.B.B.S.(Ran), M.D.(Pat).</h2>
+        </div>
+        <h2 class="flex-center top25">GENERAL PHYSICIAN & PAIN SPECIALIST</h2>                                                                                     
+        <p class="bold-spaced">
+            Retd. Professor & HOD<br>
+            Department of Critical Care & Pain Medicine.<br>
+            JLN Medical College, Bhagalpur.<br>
+            Reg; 12831/Bihar.<br>
+            Address: 401 Rameshwaram Apartment, Bhootnath Road, PATNA. (800026).<br>
+        </p>
+        <section class="section bold-large">
+            <div class="halfrow">
+                Patient’s Reference No:                                           
+            </div>
+            <div class="halfrow">
+                Date:
+            </div>
+            <div class="halfrow">
+                Patient’s Name:                                                                                                     
+            </div>
+            <div class="halfrow">
+                Age/Sex:                                                                         
+            </div>
+            Address:                                                                                                                                                                                                                
+        </section>
+        <section class="section flex-down underline-bold">
+            <div class="above">
+                Presenting Complaints:
+            </div>
+            <div class="under">
+                Past History / Medications /Operations: 
+            </div>    
+        </section>
+        
+
+        <section class="section">
+            <div class="quarters">
+                <div>Pulse:</div>
+                <div>Temp:</div>
+                <div>BP:</div>
+                <div>Chest:</div>
+                <div>H/S:</div>
+                <div>SpO2:</div>
+                <div>Skin:</div>
+                <div>Blood Sugar:</div>
+                <div>CVS:</div>
+                <div>ECG:</div>
+                <div>PFT:</div>
+                <div>PA:</div>
+                <div>Liver:</div>
+                <div>Spleen:</div>
+                <div>Kidney:</div>
+                <div>LN:</div>
+            </div>
+            <br><br>
+            <div class="underline-bold">
+                Investigations: 
+            </div>
+            <table>
+                <tr>
+                    <td>Required</td>
+                    <td>Result</td>
+                    <td>Required</td>
+                    <td>Result</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>  
+                
+                
+                
+            <div class="underline-bold">
+                Other investigations: 
+            </div>    
+                R
+            <table>
+                <tr>
+                    <td>MEDICINES</td>
+                    <td>STRENGTH</td>
+                    <td>DURATION</td>
+                    <td>DOSES</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div class="underline-bold">
+                Special Instructions:
+            </div>    
+        </section>
+        <div class="right-bottom">
+            Doctor’s Signature & Stamp
+        </div> 
+    </body>
+</html>
