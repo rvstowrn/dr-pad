@@ -1,8 +1,9 @@
 #add *{
-	margin-bottom: 0 !Important;
+	margin-top: 7px !important;
+	margin-bottom: 0 !important;
 }
 #view{
-	max-height:520px;
+	max-height:720px;
 	overflow-y:auto;     	
 }
 #update *{
@@ -10,10 +11,10 @@
 }
 
 .projectContainer{
-	height: 600px;
-	width: 800px;
+	height: 800px;
+	width: 950px;
 	border: 2px solid rgba(0,0,0,0.4);
-	overflow: hidden;
+	overflow: hidden auto;
 }
 .absolute-center{
 	position: absolute;
@@ -27,7 +28,7 @@
 	 width: calc(100% - 2.5rem);
 	 float: none;
 	 margin-top: 10px;
-	 height: 150px;
+	 height: 100px;
 	 display: block;
 	 border-radius: 4px;
 	 transition: box-shadow, border-color 0.2s;
@@ -69,5 +70,32 @@ nav {
   -webkit-app-region: no-drag;
 }
 html,body{
-	overflow: hidden;
+	overflow-x: hidden;
+}
+::-webkit-scrollbar {
+	width: 0;
+}
+.investigation-table{
+	color: rgb(73, 70, 70);
+	border-collapse: collapse;
+	margin-left: 18px;
+	margin-right: 18px;
+}
+.investigation-table td{
+	height: 20px;
+	width: 25%;
+	border: 1px solid;
+	padding: 2px !important;
+	position: relative;
+	outline: none;
+}
+.sub-heading{
+	text-align: left;
+	font-weight: 600;
+	text-decoration: underline;
+}
+.table-header > td{
+	font-weight: bold;
+	padding-left: 10px !important;
+	box-sizing: border-box;
 }
