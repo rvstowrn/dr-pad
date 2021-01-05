@@ -290,7 +290,7 @@ function writer(obj){
               }
               .right-bottom{
                   position: absolute;
-                  bottom: 10px;
+                  bottom: 60px;
                   right: 10px;
               }
               table{

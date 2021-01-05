@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ClincApp</title>
+	<link rel="stylesheet" href="./Assets/materialize.min.css">
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<div class="projectContainer absolute-center">
+    <nav class="blue">
+      <div class="nav-wrapper">
+      <a class="brand-logo center">Dr Pad</a>
+      <ul class="tabs" style="position: absolute;background: transparent;top: 50%;transform: translateY(-50%);width: 12vw">
+          <li class="tab" style="width: 6vw;"><a class="nav-a" href="#add">&#x271A;</a></li>
+          <li class="tab" style="width: 6vw;"><a id="toggle-icon" class="nav-a" href="#view">&#x2630;</a></li>
+      </ul>
+      <ul class="right">
+          <li class="tab"><a class="nav-a" onclick="appstate('minimize')">&#x268A; </a></li>
+          <li class="tab"><a class="nav-a" onclick="appstate('close')" >&#x2718;</a></li>
+      </ul>
+      
+      </div>
+    </nav>
+
+    <!-- Add Tab Layout -->
+    <div id="add" class="row" style="text-align: center;">
+      <form id="form">
+        <div class="col s6">
+          <div class="input-field col s6">
+            <input id="name" type="text" class="validate">
+            <label for="name">Name</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="gender" type="text" class="validate autocomplete">
+            <label for="gender">Gender</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="date" type="text" class="datepicker">
+            <label for="date">Date</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="age" type="text" class="validate">
+            <label for="age">Age</label>
+          </div>
+        </div>
+        
+        <div class="col input-field input-outlined s6">
+          <textarea id="address" class="materialize-textarea"></textarea>
+          <label for="address">Address</label>
+        </div>
+        <div class="col s12">
+          <div class="input-field col s6">
+            <input id="present" type="text" class="validate">
+            <label for="present">Presenting Complaints:</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="past" type="text" class="validate">
+            <label for="past">Past History / Medications /Operations:</label>
+          </div>
+        </div>
+        
+        
+        <div class="quarters col s12">
+          <div class="input-field col s3">
+            <input id="pulse" type="text" class="validate">
+            <label for="pulse">Pulse</label>
+          </div>
+          <div class="input-field col s3">
+            <input id="temp" type="text" class="validate">
+            <label for="temp">Temp</label>
+          </div>
+          <div class="input-field col s3">
+            <input id="bp" type="text" class="validate">
+            <label for="bp">BP</label>
+          </div>
+          <div class="input-field col s3">
+            <input id="chest" type="text" class="validate">
+            <label for="chest">Chest</label>
+          </div>
+          <div class="input-field col s3">
+            <input id="hs" type="text" class="validate">
+            <label for="hs">H/S</label>
+          </div>
+          <div class="input-field col s3">
+            <input id="spo2" type="text" class="validate">
+            <label for="spo2">SpO2</label>
+          </div>
+          <div class="input-field col s3">
+            <input id="skin" type="text" class="validate">
+            <label for="skin">Skin</label>
+          </div>
+          <div class="input-field col s3">
+            <input id="bloodsugar" type="text" class="validate">
+            <label for="bloodsugar">Blood Sugar</label>
+          </div>
+          <div class="input-field col s3">
+            <input id="cvs" type="text" class="validate">
+            <label for="cvs">CVS</label>
+          </div>
+          <div class="input-field col s3">
+            <input id="ecg" type="text" class="validate">
+            <label for="ecg">ECG</label>
+          </div>
+          <div class="input-field col s3">
+            <input id="pft" type="text" class="validate">
+            <label for="pft">PFT</label>
+          </div>
+          <div class="input-field col s3">
+            <input id="pa" type="text" class="validate">
+            <label for="pa">PA</label>
+          </div>
+          <div class="input-field col s3">
+            <input id="liver" type="text" class="validate">
+            <label for="liver">Liver</label>
+          </div>
+          <div class="input-field col s3">
+            <input id="spleen" type="text" class="validate">
+            <label for="spleen">Spleen</label>
+          </div>
+          <div class="input-field col s3">
+            <input id="kidney" type="text" class="validate">
+            <label for="kidney">Kidney</label>
+          </div>
+          <div class="input-field col s3">
+            <input id="ln" type="text" class="validate">
+            <label for="ln">LN</label>
+          </div>
+        </div>
+        <div class="col s12">
+          <p class="sub-heading">Investigations:</p>
+          <table class="add-table investigation-table col s12">
+            <tr class="table-header">
+              <td>Required</td>
+              <td>Result</td>
+              <td>Required</td>
+              <td>Result</td>
+            </tr>
+            <tr>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+            </tr>
+            <tr>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+            </tr>
+            <tr>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+            </tr>
+            <tr>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+            </tr>
+            <tr>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="col s12">
+          <p class="sub-heading">Other investigations:</p>
+          <table class="add-table investigation-table col s12">
+            <tr class="table-header">
+              <td>MEDICINES</td>
+              <td>STRENGTH</td>
+              <td>DURATION</td>
+              <td>DOSES</td>
+            </tr>
+            <tr>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+            </tr>
+            <tr>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+            </tr>
+            <tr>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+            </tr>
+            <tr>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+            </tr>
+            <tr>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+            </tr>
+          </table>
+        </div>
+        
+        <div class="input-field col s12">
+          <input id="special" type="text" class="validate">
+          <label for="special">Special Instructions</label>
+        </div>
+
+        <div class="col s12">
+          <br>
+          <button type="button" onclick="saveHandler('add','-1')" class="btn blue darken-1">submit</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- View Tab Layout -->
+    <div id="view" class="row">
+      <table class="col s10 push-s1 table" id="table"></table> 
+      
+      <div id="update" class="col s12" style="display: none"> 
+        <form id="form">
+          <div class="col s6">
+            <div class="input-field col s6">
+              <input id="name" type="text" class="validate">
+              <label for="name">Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="gender" type="text" class="validate autocomplete">
+              <label for="gender">Gender</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="date" type="text" class="datepicker">
+              <label for="date">Date</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="age" type="text" class="validate">
+              <label for="age">Age</label>
+            </div>
+          </div>
+          
+          <div class="col input-field input-outlined s6">
+            <textarea id="address" class="materialize-textarea"></textarea>
+            <label for="address">Address</label>
+          </div>
+          <div class="col s12">
+            <div class="input-field col s6">
+              <input id="present" type="text" class="validate">
+              <label for="present">Presenting Complaints:</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="past" type="text" class="validate">
+              <label for="past">Past History / Medications /Operations:</label>
+            </div>
+          </div>
+          
+          
+          <div class="quarters col s12">
+            <div class="input-field col s3">
+              <input id="pulse" type="text" class="validate">
+              <label for="pulse">Pulse</label>
+            </div>
+            <div class="input-field col s3">
+              <input id="temp" type="text" class="validate">
+              <label for="temp">Temp</label>
+            </div>
+            <div class="input-field col s3">
+              <input id="bp" type="text" class="validate">
+              <label for="bp">BP</label>
+            </div>
+            <div class="input-field col s3">
+              <input id="chest" type="text" class="validate">
+              <label for="chest">Chest</label>
+            </div>
+            <div class="input-field col s3">
+              <input id="hs" type="text" class="validate">
+              <label for="hs">H/S</label>
+            </div>
+            <div class="input-field col s3">
+              <input id="spo2" type="text" class="validate">
+              <label for="spo2">SpO2</label>
+            </div>
+            <div class="input-field col s3">
+              <input id="skin" type="text" class="validate">
+              <label for="skin">Skin</label>
+            </div>
+            <div class="input-field col s3">
+              <input id="bloodsugar" type="text" class="validate">
+              <label for="bloodsugar">Blood Sugar</label>
+            </div>
+            <div class="input-field col s3">
+              <input id="cvs" type="text" class="validate">
+              <label for="cvs">CVS</label>
+            </div>
+            <div class="input-field col s3">
+              <input id="ecg" type="text" class="validate">
+              <label for="ecg">ECG</label>
+            </div>
+            <div class="input-field col s3">
+              <input id="pft" type="text" class="validate">
+              <label for="pft">PFT</label>
+            </div>
+            <div class="input-field col s3">
+              <input id="pa" type="text" class="validate">
+              <label for="pa">PA</label>
+            </div>
+            <div class="input-field col s3">
+              <input id="liver" type="text" class="validate">
+              <label for="liver">Liver</label>
+            </div>
+            <div class="input-field col s3">
+              <input id="spleen" type="text" class="validate">
+              <label for="spleen">Spleen</label>
+            </div>
+            <div class="input-field col s3">
+              <input id="kidney" type="text" class="validate">
+              <label for="kidney">Kidney</label>
+            </div>
+            <div class="input-field col s3">
+              <input id="ln" type="text" class="validate">
+              <label for="ln">LN</label>
+            </div>
+          </div>
+          <div class="col s12">
+            <p class="sub-heading">Investigations:</p>
+            <table class="edit-table investigation-table col s12">
+              <tr class="table-header">
+                <td>Required</td>
+                <td>Result</td>
+                <td>Required</td>
+                <td>Result</td>
+              </tr>
+              <tr>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+              </tr>
+              <tr>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+              </tr>
+              <tr>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+              </tr>
+              <tr>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+              </tr>
+              <tr>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+              </tr>
+            </table>
+          </div>
+  
+          <div class="col s12">
+            <p class="sub-heading">Other investigations:</p>
+            <table class="edit-table investigation-table col s12">
+              <tr class="table-header">
+                <td>MEDICINES</td>
+                <td>STRENGTH</td>
+                <td>DURATION</td>
+                <td>DOSES</td>
+              </tr>
+              <tr>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+              </tr>
+              <tr>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+              </tr>
+              <tr>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+              </tr>
+              <tr>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+              </tr>
+              <tr>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+                <td contenteditable='true'></td>
+              </tr>
+            </table>
+          </div>
+          
+          <div class="input-field col s12">
+            <input id="special" type="text" class="validate">
+            <label for="special">Special Instructions</label>
+          </div>
+  
+          <div class="col s12">
+            <br>
+            <button type="button" id="editBtnSubmit" class="btn blue darken-1">submit</button>
+          </div>
+        </form>
+      </div>
+    
+    </div> 
+
+	</div>	
+
+	<script>if(typeof module==='object'){window.module=module;module=undefined;}</script>
+	<script type="text/javascript" src="./Assets/jquery.min.js"></script>
+	<script type="text/javascript" src="./Assets/materialize.min.js"></script>
+	<script type="text/javascript" src="./app.js"></script>
+</body>
+</html>

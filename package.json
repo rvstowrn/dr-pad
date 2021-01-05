@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . VermaClinicManager --platform=win32 --arch=ia32"
+    "build": "electron-packager . DrPad"
   },
   "author": "Rishabh Verma <rvstowrn@gmail.com>",
   "license": "ISC",
